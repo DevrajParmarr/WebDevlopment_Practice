@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        button:hover{
+            background-color: rgb(227, 16, 16);
+            color: white;
+        }
+        button{
+            height: 50px;
+            width: 100px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+
+    <h1 style="padding: 60px;">Open the Box </h1>
+    <div id="parent"></div>
+
+    <script>
+        parentObj=document.getElementById("parent")
+
+        for(i=1;i<=54;i++){
+            parentObj.innerHTML+=`<button onclick='update(this)'>Open${i}</button>`
+        }
+
+        function update(obj){
+          //  alert(obj)
+            obj.style.backgroundColor='red'
+            obj.style.visibility='hidden'
+        }
+
+
+    </script>
+</body>
+</html>
